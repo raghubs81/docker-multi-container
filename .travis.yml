@@ -31,7 +31,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Now that we are authenticated to docker-hub account, we can push images.
-  - docker push raghubs81/multi-web-server
-  - docker push raghubs81/multi-app-server
-  - docker push raghubs81/multi-worker
-  - docker push raghubs81/multi-lb
+  - docker push raghubs81/multi-web-server:latest
+  - docker push raghubs81/multi-app-server:latest
+  - docker push raghubs81/multi-worker:latest
+  - docker push raghubs81/multi-lb:latest
