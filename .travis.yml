@@ -20,10 +20,10 @@ script:
   - docker run -e CI=true raghubs81/multi-web-server-dev npm run test
 
 after_success:
-  - docker build -t raghubs81/multi-web-server ./web-server
-  - docker build -t raghubs81/multi-app-server ./app-server
-  - docker build -t raghubs81/multi-worker     ./worker
-  - docker build -t raghubs81/multi-lb         ./lb
+  - docker build -t raghubs81/multi-web-server:latest ./web-server
+  - docker build -t raghubs81/multi-app-server:latest ./app-server
+  - docker build -t raghubs81/multi-worker:latest     ./worker
+  - docker build -t raghubs81/multi-lb:latest         ./lb
 
   # Environment variables DOCKER_ID and DOCKER_PASSWORD are added -- https://travis-ci.com/raghubs81/docker-multi-container/settings
   # The command "docker login" asks for username/password and associates "docker" client with "docker hub" account. 
